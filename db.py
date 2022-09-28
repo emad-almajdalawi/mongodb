@@ -12,7 +12,9 @@ my_collection = example_db.my_collection
 # result = my_collection.insert_one({'name': 'emad', 'age': 24, 'city': 'Amman'})
 # print(my_collection.delete_one({'_id': ObjectId('63343cea0ca00dc8f93b748e')}))
 # my_collection.update_one({'name': 'emad'}, {'$set': {'age': 25}})
-# my_collection.update_one({'name': 'emad'}, {'$inc': {'age': 1}})
+my_collection.update_one({'name': 'emad'}, {'$inc': {'age': 1}})
+my_collection.update_one({'name': 'emad'}, {'$inc': {'age': -1}})
+
 
 print(example_db.list_collection_names())
 
