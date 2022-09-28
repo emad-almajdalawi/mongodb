@@ -1,4 +1,5 @@
 from datetime import datetime
+from datetime import datetime
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 
@@ -14,6 +15,8 @@ my_collection = example_db.my_collection
 # my_collection.update_one({'name': 'emad'}, {'$set': {'age': 25}})
 my_collection.update_one({'name': 'emad'}, {'$inc': {'age': 1}})
 my_collection.update_one({'name': 'emad'}, {'$inc': {'age': -1}})
+my_collection.update_one({'name': 'emad'}, {'$set': {'modifying_date': datetime.now()}})  # search for $currentDate
+
 
 
 print(example_db.list_collection_names())
